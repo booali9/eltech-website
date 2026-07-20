@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
+import styles from './faq.module.css';
 
 const categories = [
   {
@@ -168,30 +169,16 @@ export default function FAQPage() {
       {/* FAQ Content */}
       <section className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: 64, alignItems: 'start' }}>
+          <div className={styles.grid}>
 
             {/* Sidebar Category Nav */}
-            <div style={{ position: 'sticky', top: 120 }}>
-              <div style={{ background: 'var(--off-white)', borderRadius: 12, padding: 8, border: '1px solid var(--border)' }}>
+            <div className={styles.sidebar}>
+              <div className={styles.navBox}>
                 {categories.map((cat, i) => (
                   <button
                     key={cat.label}
                     onClick={() => setActiveCategory(i)}
-                    style={{
-                      width: '100%',
-                      textAlign: 'left',
-                      padding: '14px 20px',
-                      borderRadius: 8,
-                      border: 'none',
-                      cursor: 'pointer',
-                      fontFamily: 'var(--font-body)',
-                      fontWeight: 600,
-                      fontSize: '0.95rem',
-                      transition: 'all 0.2s ease',
-                      background: activeCategory === i ? 'var(--secondary)' : 'transparent',
-                      color: activeCategory === i ? '#fff' : 'var(--text-muted)',
-                      marginBottom: 4,
-                    }}
+                    className={`${styles.navBtn} ${activeCategory === i ? styles.active : ''}`}
                   >
                     {cat.label}
                   </button>

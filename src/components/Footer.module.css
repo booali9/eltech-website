@@ -110,9 +110,6 @@
 }
 
 @media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 600px) {
   .grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
   .bottom { flex-direction: column; gap: 16px; text-align: center; }
   .legalLinks { flex-wrap: wrap; justify-content: center; }
