@@ -1,0 +1,334 @@
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: var(--off-white);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: radial-gradient(circle at 80% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 20% 100%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  padding: 120px 32px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--secondary);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+  margin-bottom: 32px;
+  letter-spacing: -0.03em;
+}
+
+.heroSub {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.trustLine {
+  font-size: 0.95rem;
+  color: var(--gray-400);
+  font-weight: 500;
+}
+
+/* Intro */
+.introGrid {
+  align-items: center;
+  gap: 80px;
+}
+
+.introBadges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.statBox {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 0;
+  border-left: 3px solid var(--secondary);
+  padding-left: 24px;
+}
+
+.statIcon {
+  color: var(--secondary);
+  margin-bottom: 16px;
+}
+
+/* Services */
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary), var(--accent));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -12px rgba(37, 99, 235, 0.15);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.serviceCard:hover::before {
+  opacity: 1;
+}
+
+.cardIconBox {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--off-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  margin-bottom: 24px;
+  transition: all 0.4s ease;
+}
+
+.serviceCard:hover .cardIconBox {
+  background: var(--secondary);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.cardArrow {
+  margin-top: auto;
+  padding-top: 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.3s ease;
+}
+
+.serviceCard:hover .cardArrow {
+  gap: 16px;
+}
+
+/* Feature sections */
+.featureGrid {
+  align-items: center;
+  gap: 80px;
+}
+
+.featureImage {
+  position: relative;
+  height: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureImagePlaceholder {
+  color: var(--gray-400);
+}
+
+.featureText {}
+
+/* Automation visual */
+.automationVisual {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 60px 40px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.flowStep {
+  background: var(--off-white);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  padding: 20px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.flowArrow {
+  color: var(--gray-400);
+  padding: 16px 0;
+}
+
+/* Outcome pills */
+.outcomePills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.pill {
+  background: var(--white);
+  color: var(--text);
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+/* Why Section */
+.whyCard {
+  padding: 40px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, var(--white) 0%, var(--gray-50) 100%);
+  border: 1px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.whyCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+  transition: transform 0.6s ease;
+}
+
+.whyCard:hover {
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 16px 32px -12px rgba(15, 23, 42, 0.1);
+  transform: translateY(-4px);
+}
+
+.whyCard:hover::after {
+  transform: translate(10%, -10%) scale(1.5);
+}
+
+.whyIcon { 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.06);
+  color: var(--secondary); 
+  margin-bottom: 24px; 
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease, color 0.4s ease;
+}
+
+.whyCard:hover .whyIcon {
+  transform: scale(1.1) rotate(5deg);
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.whyTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+}
+
+.whyText { font-size: 1.05rem; color: var(--text-muted); line-height: 1.7; }
+
+/* Industries */
+.industryPill {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 1.05rem;
+  color: var(--white);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.industryPill:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.industryPillIcon { color: var(--accent); }
+
+@media (max-width: 992px) {
+  .introGrid, .featureGrid { grid-template-columns: 1fr; gap: 48px; }
+  .featureImage { height: 400px; }
+  .heroTitle { font-size: 3rem; }
+}
