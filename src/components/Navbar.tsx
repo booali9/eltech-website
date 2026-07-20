@@ -60,26 +60,39 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger */}
-        <button className={styles.hamburger} onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
-          {mobileOpen
-            ? <X size={28} color={scrolled ? 'var(--primary)' : '#fff'} />
-            : <Menu size={28} color={scrolled ? 'var(--primary)' : '#fff'} />
-          }
+        <button className={styles.hamburger} onClick={() => setMobileOpen(true)} aria-label="Menu">
+          <Menu size={28} color={scrolled ? 'var(--primary)' : '#fff'} />
         </button>
       </div>
 
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`${styles.mobileOverlay} ${mobileOpen ? styles.open : ''}`} 
+        onClick={() => setMobileOpen(false)}
+        aria-hidden="true"
+      />
+
       {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className={styles.mobileMenu}>
+      <div className={`${styles.mobileMenu} ${mobileOpen ? styles.open : ''}`}>
+        <div className={styles.mobileMenuHeader}>
+          <Link href="/" className={styles.logo} style={{ fontSize: '1.25rem', gap: '8px', color: 'var(--primary)' }} onClick={() => setMobileOpen(false)}>
+            <Image src="/Eltech-Solutions-Symbol-Transparent.png" alt="Eltech Solutions Logo" width={40} height={40} style={{ objectFit: 'contain' }} priority />
+            <span style={{ fontWeight: 700 }}>Eltech Solutions</span>
+          </Link>
+          <button className={styles.closeBtn} onClick={() => setMobileOpen(false)} aria-label="Close Menu">
+            <X size={28} color="var(--primary)" />
+          </button>
+        </div>
+        <div className={styles.mobileMenuLinks}>
           <Link href="/" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Home</Link>
           <Link href="/company/about" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Company</Link>
           <Link href="/services" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Services</Link>
           <Link href="/industries" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Industries</Link>
           <Link href="/how-we-work" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>How We Work</Link>
           <Link href="/faq" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>FAQ</Link>
-          <Link href="/contact" className="btn btn-primary" style={{ marginTop: '16px', justifyContent: 'center' }} onClick={() => setMobileOpen(false)}>Let&apos;s Talk</Link>
+          <Link href="/contact" className="btn btn-primary" style={{ marginTop: '24px', justifyContent: 'center' }} onClick={() => setMobileOpen(false)}>Let&apos;s Talk</Link>
         </div>
-      )}
+      </div>
     </header>
   );
 }
