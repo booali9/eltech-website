@@ -28,9 +28,9 @@ export default function Navbar() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         {/* Logo - Made significantly more prominent */}
-        <Link href="/" className={styles.logo} style={{ fontSize: '1.75rem', gap: '12px' }}>
-          <Image src="/Eltech-Solutions-Symbol-Transparent.png" alt="Eltech Solutions Logo" width={65} height={65} style={{ objectFit: 'contain' }} priority />
-          <span style={{ fontWeight: 700 }}>Eltech Solutions</span>
+        <Link href="/" className={styles.logo}>
+          <Image src="/Eltech-Solutions-Symbol-Transparent.png" alt="Eltech Solutions Logo" width={65} height={65} className={styles.logoImg} priority />
+          <span>Eltech Solutions</span>
         </Link>
 
         {/* Desktop Nav */}

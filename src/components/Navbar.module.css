@@ -30,11 +30,20 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-weight: 800;
-  font-size: 1.4rem;
   color: var(--white);
   letter-spacing: -0.03em;
   transition: color 0.3s ease;
+}
+
+.logo span {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.logoImg {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
 }
 
 .header.scrolled .logo {
@@ -223,4 +232,17 @@
   }
 
   .mobileLink:hover { color: var(--secondary); }
+
+  .logo {
+    gap: 8px;
+  }
+
+  .logo span {
+    font-size: 1.35rem;
+  }
+
+  .logoImg {
+    width: 45px;
+    height: 45px;
+  }
 }
