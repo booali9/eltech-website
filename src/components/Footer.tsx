@@ -8,7 +8,7 @@ const Footer = () => (
     <div className="container">
       <div className={styles.grid}>
         <div className={styles.brand}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+          <div className={styles.brandLogo}>
             <Image src="/Eltech-Solutions-Symbol-Transparent.png" alt="Eltech Solutions Logo" width={80} height={80} className={styles.footerLogoImg} style={{ objectFit: 'contain' }} />
             <div className={styles.logoText} style={{ margin: 0 }}>Eltech <span>Solutions</span></div>
           </div>
