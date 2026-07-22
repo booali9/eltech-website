@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ManageCookieButton from './ManageCookieButton';
 
 export const metadata: Metadata = {
   title: 'Cookie Notice | Eltech Solutions',
@@ -33,17 +34,7 @@ export default function CookieNoticePage() {
             <p style={{ marginBottom: 24, color: 'var(--text-muted)' }}>
               You can manage your cookie preferences at any time by clicking the button below, or by adjusting the settings in your web browser. Please note that disabling essential cookies may affect the functionality of the website.
             </p>
-            <button
-              onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).__openCookieManage) {
-                  (window as any).__openCookieManage();
-                }
-              }}
-              className="btn btn-primary"
-              style={{ padding: '10px 20px' }}
-            >
-              Manage Cookie Preferences
-            </button>
+            <ManageCookieButton />
           </div>
         </div>
       </section>
