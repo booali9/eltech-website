@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
+import Analytics from '@/components/Analytics';
 
 export const metadata: Metadata = {
   title: {
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   keywords: ['custom software development Pakistan', 'AI solutions', 'business automation', 'web development', 'mobile apps'],
   openGraph: {
     siteName: 'Eltech Solutions',
+    url: 'https://www.eltech.com.pk',
     locale: 'en_US',
     type: 'website',
   },
@@ -32,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );

@@ -51,7 +51,7 @@ export default function HomePage() {
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,20,42,0.88) 0%, rgba(10,20,42,0.65) 100%)', zIndex: 1 }} />
         <div className={`container ${styles.heroContent}`} style={{ position: 'relative', zIndex: 2 }}>
           <Reveal>
-            <div className={styles.eyebrow} style={{ color: 'var(--accent)', letterSpacing: '2.5px', textTransform: 'uppercase', fontSize: '0.75rem', fontWeight: 700, marginBottom: 24 }}>Software · AI · Digital Services</div>
+            <div className={styles.eyebrow} style={{ color: 'var(--accent)', letterSpacing: '2.5px', textTransform: 'uppercase', fontSize: '0.75rem', fontWeight: 700, marginBottom: 24 }}>SOFTWARE, AI & DIGITAL SERVICES FROM PAKISTAN</div>
             <h1 className={styles.heroTitle} style={{ color: 'var(--white)', fontSize: 'clamp(3rem, 6vw, 5rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em', marginBottom: 28 }}>Technology Designed<br/>Around Your Business</h1>
           </Reveal>
           <Reveal delay={0.2}>
@@ -83,11 +83,8 @@ export default function HomePage() {
                 <h2 className="section-title">Technology should solve a business problem</h2>
               </Reveal>
               <Reveal delay={0.2}>
-                <p style={{ color: 'var(--text-muted)', marginBottom: 24, fontSize: '1.125rem', lineHeight: 1.7 }}>
-                  We help companies convert ideas, operational requirements and manual processes into useful digital solutions. From a customer-facing website or mobile application to a customized workflow platform, our work begins with understanding what the business needs to achieve.
-                </p>
                 <p style={{ color: 'var(--text-muted)', marginBottom: 40, fontSize: '1.125rem', lineHeight: 1.7 }}>
-                  We then define, design, develop and support an appropriate solution through a clear delivery process — with documented milestones and visible progress throughout.
+                  We help companies convert ideas, operational requirements and manual processes into useful digital solutions. From a customer-facing website or mobile application to a customized workflow platform, our work begins with understanding what the business needs to achieve. We then define, design, develop and support an appropriate solution through a clear delivery process.
                 </p>
                 <Link href="/company/about" className="btn btn-secondary">Learn About Us</Link>
               </Reveal>
@@ -138,12 +135,12 @@ export default function HomePage() {
           </Reveal>
           <div className="grid-3">
             {[
-              { icon: <Code2 size={24} />, title: 'Custom Software', text: 'Purpose-built platforms, portals and operational systems aligned with your workflows.', href: '/services/custom-software' },
-              { icon: <BrainCircuit size={24} />, title: 'AI & Data Solutions', text: 'Responsible AI-enabled tools, analytics and data workflows that support better decisions.', href: '/services/ai-data' },
-              { icon: <Workflow size={24} />, title: 'Business Automation', text: 'Connected approvals, notifications, records and reporting that reduce repetitive work.', href: '/services/automation' },
-              { icon: <Globe size={24} />, title: 'Web Development', text: 'Responsive corporate websites, portals and commerce experiences designed for usability.', href: '/services/web-development' },
+              { icon: <Code2 size={24} />, title: 'Custom Software Development', text: 'Purpose-built platforms, portals and operational systems aligned with your workflows.', href: '/services/custom-software' },
+              { icon: <BrainCircuit size={24} />, title: 'AI & Data Solutions', text: 'Responsible AI-enabled tools, analytics and data workflows that support better decisions and productivity.', href: '/services/ai-data' },
+              { icon: <Workflow size={24} />, title: 'Business Process Automation', text: 'Connected approvals, notifications, records and reporting that reduce repetitive work.', href: '/services/automation' },
+              { icon: <Globe size={24} />, title: 'Web & E-commerce', text: 'Responsive websites, customer portals and commerce experiences designed for performance and usability.', href: '/services/web-development' },
               { icon: <Smartphone size={24} />, title: 'Mobile Applications', text: 'Android, iOS and cross-platform applications for customers, suppliers and internal teams.', href: '/services/mobile-apps' },
-              { icon: <Layout size={24} />, title: 'UI/UX & Design', text: 'User research, journeys, wireframes and interfaces that make technology easier to use.', href: '/services/ui-ux' },
+              { icon: <Layout size={24} />, title: 'UI/UX & Digital Design', text: 'User research, journeys, wireframes, prototypes and interfaces that make technology easier to use.', href: '/services/ui-ux' },
             ].map((s, i) => (
               <Reveal key={s.title} delay={0.1 * i}>
                 <Link href={s.href} className={styles.serviceCard}>
@@ -239,12 +236,12 @@ export default function HomePage() {
           </Reveal>
           <div className="grid-3">
             {[
-              { icon: <Target size={32} />, title: 'Business-First Thinking', text: 'We begin with the operational or commercial requirement before selecting the technology.' },
-              { icon: <Layers size={32} />, title: 'Customized Delivery', text: 'Features and workflows are planned according to the agreed scope — not forced into a generic template.' },
-              { icon: <MessageSquare size={32} />, title: 'Clear Communication', text: 'Defined contacts, written decisions and regular reviews keep work visible and understandable.' },
-              { icon: <ShieldCheck size={32} />, title: 'Flexible Engagement', text: 'Engage us for a complete project, selected phase, ongoing support or dedicated resources.' },
-              { icon: <Globe size={32} />, title: 'International Delivery', text: 'Processes designed to support remote collaboration and cross-border commercial clarity.' },
-              { icon: <Users size={32} />, title: 'Long-term Approach', text: 'We remain available for maintenance, improvement and future development after launch.' },
+              { icon: <Target size={32} />, title: 'Business-oriented development', text: 'We focus first on the requirement, users and expected business outcome.' },
+              { icon: <Layers size={32} />, title: 'Customized delivery', text: 'Features and workflows are planned according to the agreed scope—not forced into a generic template.' },
+              { icon: <MessageSquare size={32} />, title: 'Clear communication', text: 'Defined contacts, documented decisions and regular progress reviews keep work understandable.' },
+              { icon: <ShieldCheck size={32} />, title: 'Flexible engagement', text: 'Engage us for a complete project, selected phase, ongoing support or dedicated capability.' },
+              { icon: <Globe size={32} />, title: 'International service model', text: 'Remote collaboration, milestone reviews and time-zone-aware communication support cross-border delivery.' },
+              { icon: <Users size={32} />, title: 'Long-term approach', text: 'We remain available for maintenance, improvement and future development after launch.' },
             ].map((w, i) => (
               <Reveal key={w.title} delay={0.1 * i}>
                 <div className={styles.whyCard}>
@@ -258,12 +255,73 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* INDUSTRIES */}
+      <section className="section section-bg-light">
+        <div className="container">
+          <Reveal>
+            <div className="section-header centered">
+              <div className="section-label">Industries</div>
+              <h2 className="section-title">Technology adapted to operational realities</h2>
+              <p className="section-subtitle">Our approach can be applied across industries where people, information, approvals, customers, suppliers and transactions need to work together more effectively.</p>
+            </div>
+          </Reveal>
+          <div className="grid-4">
+            {[
+              { icon: <Building2 size={28} />, title: 'Construction and infrastructure', text: 'Project coordination, procurement and distributed teams.' },
+              { icon: <Factory size={28} />, title: 'Industrial trading and distribution', text: 'Enquiries, quotations, inventory and customer communication.' },
+              { icon: <Package size={28} />, title: 'Procurement and supply chain', text: 'RFQs, supplier onboarding and purchase decisions.' },
+              { icon: <Factory size={28} />, title: 'Manufacturing and engineering', text: 'Workflows, materials and quality records.' },
+              { icon: <Truck size={28} />, title: 'Logistics and transportation', text: 'Movement tracking, schedules and status communication.' },
+              { icon: <ShoppingCart size={28} />, title: 'Retail and e-commerce', text: 'Catalogues, orders and digital engagement.' },
+              { icon: <Hotel size={28} />, title: 'Hospitality and professional services', text: 'Bookings, service requests and reporting.' },
+              { icon: <Rocket size={28} />, title: 'Startups and emerging businesses', text: 'Product discovery, prototypes and MVPs.' },
+            ].map((ind, i) => (
+              <Reveal key={ind.title} delay={0.05 * i}>
+                <div className={styles.industryCard}>
+                  <div className={styles.industryIcon}>{ind.icon}</div>
+                  <h4 className={styles.industryTitle}>{ind.title}</h4>
+                  <p className={styles.industryText}>{ind.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: 40 }}>
+            <Link href="/industries" className="btn btn-secondary">View All Industries</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* GLOBAL DELIVERY */}
+      <section className="section">
+        <div className="container">
+          <div className={`grid-2 ${styles.featureGrid}`}>
+            <div className={styles.featureText}>
+              <Reveal>
+                <div className="section-label">Global Delivery</div>
+                <h2 className="section-title">Digital services without borders</h2>
+                <p style={{ color: 'var(--text-muted)', marginBottom: 32, fontSize: '1.125rem' }}>
+                  Based in Pakistan, Eltech Solutions is structured to collaborate remotely with clients in the United States, Canada, the United Kingdom, Europe, the Middle East, the Far East, Australia, Africa and other international markets.
+                </p>
+                <p style={{ color: 'var(--text-muted)', marginBottom: 32, fontSize: '1.125rem' }}>
+                  Projects can be managed through online meetings, documented requirements, milestone approvals and secure digital collaboration.
+                </p>
+                <Link href="/how-we-work" className="btn btn-primary">Learn How We Work</Link>
+              </Reveal>
+            </div>
+            <Reveal delay={0.2}>
+              <div className={styles.featureImage} style={{ background: 'url(https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&q=80&w=1200) center/cover' }}>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section">
         <div className="container">
           <Reveal>
             <div className="cta-banner">
-              <h2>Have a requirement or product idea to discuss?</h2>
+              <h2>Have a requirement, process or product idea to discuss?</h2>
               <p>Tell us what you want to improve or create. We will begin with a structured conversation to understand the requirement and recommend the appropriate next step.</p>
               <Link href="/contact" className="btn btn-white">Start a Conversation</Link>
             </div>

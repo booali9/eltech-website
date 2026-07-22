@@ -35,7 +35,7 @@ export default function PrivacyPage() {
 
             <h2 style={{ marginBottom: 16 }}>4. Contact Us</h2>
             <p style={{ color: 'var(--text-muted)' }}>
-              If you have any questions regarding this Privacy Policy, please contact us at info@eltechsolutions.io.
+              If you have any questions regarding this Privacy Policy, please contact us at mustafa@eltech.com.pk.
             </p>
           </div>
         </div>

@@ -23,6 +23,7 @@ const values = [
   { name: 'Confidentiality', desc: 'We treat client information, processes and intellectual property with professional care.', icon: <Lock size={28} /> },
   { name: 'Practicality', desc: 'We recommend solutions that suit the business rather than adding unnecessary complexity.', icon: <ThumbsUp size={28} /> },
   { name: 'Quality', desc: 'We review functionality, usability and reliability before asking clients to accept deliverables.', icon: <CheckCircle size={28} /> },
+  { name: 'Improvement', desc: 'We learn from feedback and continuously strengthen our methods and capability.', icon: <Target size={28} /> },
   { name: 'Partnership', desc: 'We aim to build productive long-term relationships rather than complete isolated transactions.', icon: <HeartHandshake size={28} /> },
 ];
 
@@ -115,12 +116,14 @@ export default function AboutPage() {
             <div className="section-label" style={{ color: 'var(--accent)' }}>Company Facts</div>
             <h2 className="section-title">About Eltech Solutions</h2>
           </div>
-          <div className="grid-4" style={{ gap: '32px', textAlign: 'center' }}>
+          <div className="grid-3" style={{ gap: '32px', textAlign: 'center' }}>
             {[
               { label: 'Established', value: '2025' },
-              { label: 'Legal Structure', value: 'AOP' },
+              { label: 'Legal Structure', value: 'Association of Persons (AOP)' },
               { label: 'Registered In', value: 'Pakistan' },
-              { label: 'Delivery Model', value: 'Remote International' },
+              { label: 'Business', value: 'Software & Digital Services' },
+              { label: 'Delivery Model', value: 'Pakistan-based with remote international engagement' },
+              { label: 'Target Markets', value: 'North America, UK, Europe, Middle East, Far East, Australia, Africa' },
             ].map(f => (
               <div key={f.label} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '40px 24px', border: '1px solid rgba(255,255,255,0.1)' }}>
                 <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--accent)', fontFamily: 'var(--font-heading)', marginBottom: '12px' }}>{f.value}</div>

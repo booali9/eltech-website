@@ -1,15 +1,21 @@
+"use client";
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Footer.module.css';
 import SubscribeForm from './SubscribeForm';
 
-const Footer = () => (
-  <footer className={styles.footer}>
+const Footer = () => {
+  const openCookieManage = () => {
+    (window as any).__openCookieManage?.();
+  };
+
+  return (
+    <footer className={styles.footer}>
     <div className="container">
       <div className={styles.grid}>
         <div className={styles.brand}>
           <div className={styles.brandLogo}>
-            <Image src="/Eltech-Solutions-Symbol-Transparent.png" alt="Eltech Solutions Logo" width={80} height={80} className={styles.footerLogoImg} style={{ objectFit: 'contain' }} />
+            <Image src="/E-logo.png" alt="Eltech Solutions Logo" width={80} height={80} className={styles.footerLogoImg} style={{ objectFit: 'contain' }} />
             <div className={styles.logoText} style={{ margin: 0 }}>Eltech <span>Solutions</span></div>
           </div>
           <p>Pakistan-based software and digital services company — delivering custom software, AI solutions, automation, web and mobile development for international clients.</p>
@@ -49,8 +55,11 @@ const Footer = () => (
           </div>
           <div className={styles.contactInfo} style={{ marginTop: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
             <p style={{ display: 'flex', gap: 8, alignItems: 'center' }}><span>📍</span> Pakistan</p>
-            <a href="mailto:info@eltechsolutions.io" style={{ display: 'flex', gap: 8, alignItems: 'center', color: 'var(--text-muted)', textDecoration: 'none' }}>
-              <span>✉️</span> info@eltechsolutions.io
+            <a href="mailto:mustafa@eltech.com.pk" style={{ display: 'flex', gap: 8, alignItems: 'center', color: 'var(--text-muted)', textDecoration: 'none' }}>
+              <span>✉️</span> mustafa@eltech.com.pk
+            </a>
+            <a href="https://www.eltech.com.pk" style={{ display: 'flex', gap: 8, alignItems: 'center', color: 'var(--text-muted)', textDecoration: 'none' }} target="_blank" rel="noreferrer">
+              <span>🌐</span> www.eltech.com.pk
             </a>
             <a href="tel:+12345678900" style={{ display: 'flex', gap: 8, alignItems: 'center', color: 'var(--text-muted)', textDecoration: 'none' }}>
               <span>📞</span> +1 (234) 567 8900
@@ -65,11 +74,12 @@ const Footer = () => (
           <Link href="/privacy" className={styles.legalLink}>Privacy Policy</Link>
           <Link href="/terms" className={styles.legalLink}>Terms of Use</Link>
           <Link href="/cookie-notice" className={styles.legalLink}>Cookie Notice</Link>
-          <a href="https://linkedin.com" aria-label="LinkedIn" className={styles.legalLink} target="_blank" rel="noreferrer">LinkedIn</a>
+          <button onClick={openCookieManage} className={styles.legalLink} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', font: 'inherit' }}>Manage Cookies</button>
         </div>
       </div>
     </div>
   </footer>
-);
+  );
+};
 
 export default Footer;

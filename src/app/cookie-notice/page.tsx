@@ -26,13 +26,24 @@ export default function CookieNoticePage() {
             <h2 style={{ marginBottom: 16 }}>2. Types of Cookies We Use</h2>
             <p style={{ marginBottom: 24, color: 'var(--text-muted)' }}>
               <strong>Essential Cookies:</strong> These are required for the operation of our website. They cannot be disabled.<br /><br />
-              <strong>Analytics Cookies:</strong> With your permission, we use these to understand how visitors interact with the website, allowing us to improve the design and user experience.
+              <strong>Analytics Cookies:</strong> With your permission, we use Google Analytics to understand how visitors interact with the website, allowing us to improve the design and user experience. These cookies are only loaded if you accept optional cookies.
             </p>
 
             <h2 style={{ marginBottom: 16 }}>3. Managing Cookies</h2>
-            <p style={{ color: 'var(--text-muted)' }}>
-              You can manage your cookie preferences at any time by clicking the Cookie Banner at the bottom of the page, or by adjusting the settings in your web browser. Please note that disabling essential cookies may affect the functionality of the website.
+            <p style={{ marginBottom: 24, color: 'var(--text-muted)' }}>
+              You can manage your cookie preferences at any time by clicking the button below, or by adjusting the settings in your web browser. Please note that disabling essential cookies may affect the functionality of the website.
             </p>
+            <button
+              onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).__openCookieManage) {
+                  (window as any).__openCookieManage();
+                }
+              }}
+              className="btn btn-primary"
+              style={{ padding: '10px 20px' }}
+            >
+              Manage Cookie Preferences
+            </button>
           </div>
         </div>
       </section>

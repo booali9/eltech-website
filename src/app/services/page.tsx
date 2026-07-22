@@ -10,7 +10,8 @@ import {
   Cloud,
   ShieldCheck,
   Wrench,
-  ArrowRight
+  ArrowRight,
+  Users
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -51,18 +52,23 @@ const services = [
   },
   {
     icon: <Cloud size={28} />, title: 'Cloud & Systems Integration', text: 'Deployment environments, APIs, databases and connections between appropriate business systems.',
-    href: '/services',
+    href: '/services/cloud-integration',
     bullets: ['Cloud deployment', 'API development & integration', 'Database planning', 'Migration planning'],
   },
   {
     icon: <ShieldCheck size={28} />, title: 'Quality Assurance', text: 'Functional, usability, compatibility and regression testing throughout delivery.',
-    href: '/services',
+    href: '/services/quality-assurance',
     bullets: ['Functional testing', 'Usability review', 'Browser & device testing', 'User acceptance support'],
   },
   {
-    icon: <Wrench size={28} />, title: 'Maintenance & Support', text: 'Troubleshooting, updates, monitoring, improvements and agreed support after launch.',
-    href: '/services',
+    icon: <Wrench size={28} />, title: 'Maintenance & Technical Support', text: 'Troubleshooting, updates, monitoring, improvements and agreed support after launch.',
+    href: '/services/quality-assurance',
     bullets: ['Technical troubleshooting', 'Software & dependency updates', 'Performance monitoring', 'Feature enhancements'],
+  },
+  {
+    icon: <Users size={28} />, title: 'Dedicated Technical Resources', text: 'Project-based or ongoing access to selected development, design, testing and coordination capability.',
+    href: '/services/dedicated-resources',
+    bullets: ['Software & web developers', 'Mobile application developers', 'UI/UX & graphic designers', 'QA professionals'],
   },
 ];
 

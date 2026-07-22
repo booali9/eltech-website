@@ -12,37 +12,49 @@ const articles = [
     title: 'When Does a Business Need Custom Software?',
     category: 'Custom Software',
     date: 'July 12, 2026',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
+    active: true,
+    href: '/insights/when-custom-software'
   },
   {
     title: 'Seven Signs a Manual Process Is Ready for Automation',
     category: 'Business Automation',
     date: 'June 28, 2026',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
+    active: true,
+    href: '/insights/automation-signs'
   },
   {
     title: 'How to Prepare Requirements Before Hiring a Software Company',
     category: 'Project Management',
     date: 'June 15, 2026',
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=800',
+    active: true,
+    href: '/insights/requirements-preparation'
   },
   {
     title: 'Custom Software vs. Off-the-Shelf Software: A Practical Comparison',
     category: 'Custom Software',
     date: 'May 30, 2026',
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800',
+    active: true,
+    href: '/insights/custom-vs-offshelf'
   },
   {
     title: 'What Makes an AI Use Case Commercially Useful?',
     category: 'AI & Data',
     date: 'May 14, 2026',
-    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800',
+    active: true,
+    href: '/insights/ai-use-cases'
   },
   {
     title: 'How to Manage an International Software Project Remotely',
     category: 'Global Delivery',
     date: 'April 22, 2026',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800',
+    active: true,
+    href: '/insights/remote-project-management'
   }
 ];
 
@@ -61,16 +73,19 @@ export default function InsightsPage() {
         <div className="container">
           <div className="grid-3">
             {articles.map(article => (
-              <div key={article.title} className="card" style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-                <div style={{ height: 200, background: `url(${article.image}) center/cover` }}></div>
+              <div key={article.title} className="card" style={{ padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column', opacity: article.active ? 1 : 0.55, pointerEvents: article.active ? 'auto' : 'none', position: 'relative' }}>
+                <div style={{ height: 200, background: `url(${article.image}) center/cover`, filter: article.active ? 'none' : 'grayscale(100%)' }}></div>
+                {!article.active && (
+                  <span style={{ position: 'absolute', top: 16, right: 16, background: 'var(--text-muted)', color: '#fff', fontSize: '0.75rem', fontWeight: 700, padding: '4px 12px', borderRadius: 20, textTransform: 'uppercase', letterSpacing: 1 }}>Coming Soon</span>
+                )}
                 <div style={{ padding: '32px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
                     <span style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--secondary)' }}>{article.category}</span>
                     <span style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>{article.date}</span>
                   </div>
                   <h3 style={{ fontSize: '1.25rem', marginBottom: 24, lineHeight: 1.4 }}>{article.title}</h3>
-                  <Link href="#" style={{ fontWeight: 600, color: 'var(--primary)', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                    Read Article <span>&rarr;</span>
+                  <Link href={article.href || '#'} style={{ fontWeight: 600, color: 'var(--primary)', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                    {article.active ? 'Read Article' : 'Coming Soon'} <span>&rarr;</span>
                   </Link>
                 </div>
               </div>

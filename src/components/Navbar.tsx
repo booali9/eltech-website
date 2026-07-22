@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
         {/* Logo - Made significantly more prominent */}
         <Link href="/" className={styles.logo}>
-          <Image src="/Eltech-Solutions-Symbol-Transparent.png" alt="Eltech Solutions Logo" width={65} height={65} className={styles.logoImg} priority />
+          <Image src={scrolled ? "/Eltech-Solutions-Symbol-Transparent.png" : "/E-logo.png"} alt="Eltech Solutions Logo" width={65} height={65} className={styles.logoImg} priority />
           <span>Eltech Solutions</span>
         </Link>
 

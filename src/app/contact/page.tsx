@@ -147,12 +147,9 @@ export default function ContactPage() {
                   </div>
                   <div className={styles.contactItem}>
                     <span>✉️</span>
-                    <div><strong>Email</strong><br /><a href="mailto:info@eltechsolutions.io">info@eltechsolutions.io</a></div>
+                    <div><strong>Email</strong><br /><a href="mailto:mustafa@eltech.com.pk">mustafa@eltech.com.pk</a></div>
                   </div>
-                  <div className={styles.contactItem}>
-                    <span>💼</span>
-                    <div><strong>LinkedIn</strong><br /><a href="https://linkedin.com" target="_blank" rel="noreferrer">Connect on LinkedIn</a></div>
-                  </div>
+
                 </div>
               </div>
 
